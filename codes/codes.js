@@ -72,6 +72,15 @@ setInterval(function nextBtn() {
 function couponApply() {
   const couponText = document.getElementById("couponText").value;
   const totalPrice = document.getElementById("totalPrice").innerText;
+  const priceContainer = document.getElementById("priceContainer");
+  const GrandPrice = document.getElementById("finalPrice");
+  const div = document.createElement("div");
+  const discounted0 = document.createElement("h1");
+  discounted0.textContent = "discounted Price";
+  div.appendChild(discounted0);
+  div.classList.add("flex");
+  div.classList.add("justify-between");
+  priceContainer.appendChild(div);
 
   const couponTextSmall = couponText.toLowerCase();
   const fifteenDisc = "new15";
@@ -79,11 +88,17 @@ function couponApply() {
   if (couponTextSmall === fifteenDisc) {
     const discounted = totalPrice * 0.15;
     const finalPrice = totalPrice - totalPrice * 0.15;
-    console.log(discounted, finalPrice);
+    GrandPrice.innerText = finalPrice;
+    const discountedPrice = document.createElement("h1");
+    discountedPrice.textContent = discounted;
+    div.appendChild(discountedPrice);
   }
   if (couponTextSmall === coupleDisc) {
     const discounted = totalPrice * 0.2;
     const finalPrice = totalPrice - totalPrice * 0.2;
-    console.log(discounted, finalPrice);
+    GrandPrice.innerText = finalPrice;
+    const discountedPrice = document.createElement("h1");
+    discountedPrice.textContent = discounted;
+    div.appendChild(discountedPrice);
   }
 }
