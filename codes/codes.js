@@ -78,7 +78,7 @@ function couponApply() {
   const div = document.createElement("div");
   const discounted0 = document.createElement("h1");
   discounted0.textContent = "discounted Price";
-  div.appendChild(discounted0);
+
   div.classList.add("flex");
   div.classList.add("justify-between");
   priceContainer.appendChild(div);
@@ -93,6 +93,7 @@ function couponApply() {
     const discountedPrice = document.createElement("h1");
     discountedPrice.textContent = discounted;
     div.appendChild(discountedPrice);
+    div.appendChild(discounted0);
     applyBtn.classList.add("hidden");
   }
   if (couponTextSmall === coupleDisc) {
@@ -102,6 +103,11 @@ function couponApply() {
     const discountedPrice = document.createElement("h1");
     discountedPrice.textContent = discounted;
     div.appendChild(discountedPrice);
+    div.appendChild(discounted0);
     applyBtn.classList.add("hidden");
+  }
+
+  if (couponTextSmall !== fifteenDisc && couponTextSmall !== coupleDisc) {
+    alert("Please enter valid coupon number");
   }
 }
