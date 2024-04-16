@@ -341,11 +341,17 @@
               <h1>BDT : <span id="totalPrice">00</span></h1>
             </div>
             <label class="input input-bordered flex items-center gap-2">
-              <input type="text" class="grow" placeholder="Search" />
+              <input
+                type="text"
+                class="grow"
+                placeholder="Search"
+                id="couponText"
+              />
               <button
                 class="btn bg-[#1dd100] text-white"
                 disabled
                 id="couponApply"
+                onclick="couponApply()"
               >
                 Apply
               </button>

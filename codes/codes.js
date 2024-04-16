@@ -68,3 +68,8 @@ setInterval(function nextBtn() {
     nextBtn.removeAttribute("disabled");
   }
 }, 10);
+
+function couponApply() {
+  const couponText = document.getElementById("couponText").value;
+  console.log(couponText);
+}
