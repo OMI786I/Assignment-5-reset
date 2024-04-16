@@ -28,6 +28,9 @@
       .steer {
         grid-area: 1 / 6 / 2 / 7;
       }
+      html {
+        scroll-behavior: smooth;
+      }
     </style>
   </head>
 
@@ -103,8 +106,9 @@
             </p>
             <button
               class="bg-[#1dd100] text-black font-bold p-3 rounded-lg hover:bg-green-400"
+              onclick="location.href='#ph-section'"
             >
-              Buy Tickets
+              Buy Ticket
             </button>
           </div>
         </div>
@@ -161,7 +165,7 @@
     </section>
     <!--offer section ends-->
     <!--PH section-->
-    <section class="bg-[#f7f8f8] mt-8 py-16">
+    <section class="bg-[#f7f8f8] mt-8 py-16" id="ph-section">
       <h1 class="text-3xl text-center font-bold mb-2">PH Paribahan</h1>
       <p class="text-center text-gray-600">
         You can easily book seat from our app. You can also see available seats
