@@ -71,5 +71,19 @@ setInterval(function nextBtn() {
 
 function couponApply() {
   const couponText = document.getElementById("couponText").value;
-  console.log(couponText);
+  const totalPrice = document.getElementById("totalPrice").innerText;
+
+  const couponTextSmall = couponText.toLowerCase();
+  const fifteenDisc = "new15";
+  const coupleDisc = "couple20";
+  if (couponTextSmall === fifteenDisc) {
+    const discounted = totalPrice * 0.15;
+    const finalPrice = totalPrice - totalPrice * 0.15;
+    console.log(discounted, finalPrice);
+  }
+  if (couponTextSmall === coupleDisc) {
+    const discounted = totalPrice * 0.2;
+    const finalPrice = totalPrice - totalPrice * 0.2;
+    console.log(discounted, finalPrice);
+  }
 }
