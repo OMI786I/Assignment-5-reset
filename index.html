@@ -263,7 +263,7 @@
                 <div class="btn" value="A3" onclick="getValue(this)">A3</div>
                 <div class="btn" value="A4" onclick="getValue(this)">A4</div>
                 <div>B</div>
-                <div class="btn" value="B1" onclick="getValue(this)">B1</div>
+                <div class="btn" value="B1" onclick="getValue(this) ">B1</div>
                 <div class="btn" value="B2" onclick="getValue(this)">B2</div>
                 <div></div>
                 <div class="btn" value="B3" onclick="getValue(this)">B3</div>
@@ -370,6 +370,8 @@
                   type="number"
                   placeholder="Enter your phone number"
                   class="input input-bordered w-full max-w-xs"
+                  id="phoneNumber"
+                  onkeydown="nextBtn()"
                 />
               </label>
             </div>
@@ -386,7 +388,13 @@
               </label>
             </div>
             <div>
-              <button class="btn bg-[#1dd100] text-white w-[100%]">Next</button>
+              <button
+                class="btn bg-[#1dd100] text-white w-[100%]"
+                disabled
+                id="next"
+              >
+                Next
+              </button>
             </div>
           </div>
         </div>

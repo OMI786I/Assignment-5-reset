@@ -47,3 +47,13 @@ function getValue(btn) {
   let totalPrice = document.getElementById("totalPrice");
   totalPrice.innerText = array.length * 550;
 }
+
+function nextBtn() {
+  const nextBtn = document.getElementById("next");
+  let phNumber = document.getElementById("phoneNumber").value;
+  let phNumberArray = phNumber.split("");
+
+  if (phNumberArray !== 0 && array.length !== 0) {
+    nextBtn.removeAttribute("disabled");
+  }
+}
