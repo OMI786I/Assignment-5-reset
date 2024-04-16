@@ -1,6 +1,10 @@
 let array = [];
 
 function getValue(btn) {
+  if (array.length == 4) {
+    return alert("4 seats selected!");
+  }
+
   const cal = btn.getAttribute("value");
 
   const seatCount = document.getElementById("seatCount");
