@@ -8,7 +8,7 @@ function getValue(btn) {
   if (!btn.classList.contains("bg-[#1dd100]")) {
     btn.classList.add("bg-[#1dd100]");
     btn.classList.add("text-white");
-    console.log(cal);
+
     array.push(cal);
     console.log(array);
   } else {
@@ -20,10 +20,28 @@ function getValue(btn) {
     }
     console.log(array);
   }
+
   seatCount.innerText = array.length;
 
   let seats = 40 - array.length;
 
   remainingSeat.innerText = seats;
-  console.log(seats);
+
+  const container = document.getElementById("container");
+  const div = document.createElement("div");
+  div.classList.add("flex");
+  div.classList.add("justify-between");
+  const seat = document.createElement("h1");
+  seat.textContent = cal;
+  const classes = document.createElement("h1");
+  classes.textContent = "Economy";
+  const money = document.createElement("h1");
+  money.textContent = 550;
+  div.appendChild(seat);
+  div.appendChild(classes);
+  div.appendChild(money);
+  container.appendChild(div);
+
+  for (const iterator of array) {
+  }
 }
