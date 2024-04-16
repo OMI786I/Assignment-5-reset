@@ -43,4 +43,7 @@ function getValue(btn) {
   let seats = 40 - array.length;
 
   remainingSeat.innerText = seats;
+
+  let totalPrice = document.getElementById("totalPrice");
+  totalPrice.innerText = array.length * 550;
 }
