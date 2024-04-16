@@ -70,6 +70,7 @@ setInterval(function nextBtn() {
 }, 10);
 
 function couponApply() {
+  const applyBtn = document.getElementById("couponArea");
   const couponText = document.getElementById("couponText").value;
   const totalPrice = document.getElementById("totalPrice").innerText;
   const priceContainer = document.getElementById("priceContainer");
@@ -92,6 +93,7 @@ function couponApply() {
     const discountedPrice = document.createElement("h1");
     discountedPrice.textContent = discounted;
     div.appendChild(discountedPrice);
+    applyBtn.classList.add("hidden");
   }
   if (couponTextSmall === coupleDisc) {
     const discounted = totalPrice * 0.2;
@@ -100,5 +102,6 @@ function couponApply() {
     const discountedPrice = document.createElement("h1");
     discountedPrice.textContent = discounted;
     div.appendChild(discountedPrice);
+    applyBtn.classList.add("hidden");
   }
 }
