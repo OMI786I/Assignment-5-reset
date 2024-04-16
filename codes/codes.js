@@ -2,6 +2,7 @@ let array = [];
 
 function getValue(btn) {
   const cal = btn.getAttribute("value");
+
   const seatCount = document.getElementById("seatCount");
   let remainingSeat = document.getElementById("remainingSeats");
 
@@ -10,7 +11,22 @@ function getValue(btn) {
     btn.classList.add("text-white");
 
     array.push(cal);
-    console.log(array);
+
+    const container = document.getElementById("container");
+    const div = document.createElement("div");
+    div.classList.add("flex");
+    div.classList.add("justify-between");
+    div.setAttribute("id", "id");
+    const seat = document.createElement("h1");
+    seat.textContent = cal;
+    const classes = document.createElement("h1");
+    classes.textContent = "Economy";
+    const money = document.createElement("h1");
+    money.textContent = 550;
+    div.appendChild(seat);
+    div.appendChild(classes);
+    div.appendChild(money);
+    container.appendChild(div);
   } else {
     btn.classList.remove("bg-[#1dd100]");
     btn.classList.remove("text-white");
@@ -18,7 +34,8 @@ function getValue(btn) {
     if (index !== -1) {
       array.splice(index, 1);
     }
-    console.log(array);
+    const elementRemove = document.getElementById("id");
+    elementRemove.remove();
   }
 
   seatCount.innerText = array.length;
@@ -26,22 +43,4 @@ function getValue(btn) {
   let seats = 40 - array.length;
 
   remainingSeat.innerText = seats;
-
-  const container = document.getElementById("container");
-  const div = document.createElement("div");
-  div.classList.add("flex");
-  div.classList.add("justify-between");
-  const seat = document.createElement("h1");
-  seat.textContent = cal;
-  const classes = document.createElement("h1");
-  classes.textContent = "Economy";
-  const money = document.createElement("h1");
-  money.textContent = 550;
-  div.appendChild(seat);
-  div.appendChild(classes);
-  div.appendChild(money);
-  container.appendChild(div);
-
-  for (const iterator of array) {
-  }
 }
