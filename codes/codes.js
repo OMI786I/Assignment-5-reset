@@ -80,6 +80,7 @@ function couponApply() {
   discounted0.textContent = "discounted Price";
 
   div.classList.add("flex");
+  div.classList.add("flex-row-reverse");
   div.classList.add("justify-between");
   priceContainer.appendChild(div);
 
