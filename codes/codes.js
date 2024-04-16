@@ -46,6 +46,13 @@ function getValue(btn) {
 
   let totalPrice = document.getElementById("totalPrice");
   totalPrice.innerText = array.length * 550;
+
+  const coupon = document.getElementById("couponApply");
+  if (array.length >= 4) {
+    coupon.removeAttribute("disabled");
+  } else {
+    coupon.setAttribute("disabled", "");
+  }
 }
 
 setInterval(function nextBtn() {
