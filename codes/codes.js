@@ -52,7 +52,7 @@ setInterval(function nextBtn() {
   const nextBtn = document.getElementById("next");
   let phNumber = document.getElementById("phoneNumber").value;
   let phNumberArray = phNumber.split("");
-  console.log(phNumberArray);
+
   if (phNumberArray.length !== 0 && array.length !== 0) {
     nextBtn.removeAttribute("disabled");
   }
