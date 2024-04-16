@@ -2,6 +2,7 @@ let array = [];
 
 function getValue(btn) {
   const cal = btn.getAttribute("value");
+  const seatCount = document.getElementById("seatCount");
 
   if (!btn.classList.contains("bg-[#1dd100]")) {
     btn.classList.add("bg-[#1dd100]");
@@ -18,4 +19,5 @@ function getValue(btn) {
     }
     console.log(array);
   }
+  seatCount.innerText = array.length;
 }
